@@ -1,0 +1,28 @@
+{
+  "name": "travelz-tailwindcss-project",
+  "version": "1.0.0",
+  "description": "Proyecto sitio web de viajes con tailwind css",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mriatorres/travelZ-tailwindcss-project.git"
+  },
+  "keywords": [
+    "tailwind",
+    "css",
+    "design",
+    "responsive"
+  ],
+  "author": "mariaf7458@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mriatorres/travelZ-tailwindcss-project/issues"
+  },
+  "homepage": "https://github.com/mriatorres/travelZ-tailwindcss-project#readme",
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
