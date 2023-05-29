@@ -692,6 +692,10 @@ select {
   position: absolute;
 }
 
+.mr-24 {
+  margin-right: 6rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -716,6 +720,10 @@ select {
   height: 18rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -728,8 +736,8 @@ select {
   width: 75%;
 }
 
-.w-36 {
-  width: 9rem;
+.w-48 {
+  width: 12rem;
 }
 
 .w-auto {
@@ -738,10 +746,6 @@ select {
 
 .w-full {
   width: 100%;
-}
-
-.w-48 {
-  width: 12rem;
 }
 
 .transform {
@@ -760,6 +764,12 @@ select {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .space-y-96 > :not([hidden]) ~ :not([hidden]) {
@@ -784,6 +794,10 @@ select {
   border-radius: 9999px;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .rounded-b-sm {
   border-bottom-right-radius: 0.125rem;
   border-bottom-left-radius: 0.125rem;
@@ -804,6 +818,18 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-bali {
+  background-image: url('https://raw.githubusercontent.com/platzi/PlatziTravel/main/public/img/bali.jpg');
+}
+
+.bg-chicago {
+  background-image: url('https://raw.githubusercontent.com/platzi/PlatziTravel/main/public/img/chicago.jpg');
+}
+
+.bg-miami {
+  background-image: url('https://raw.githubusercontent.com/platzi/PlatziTravel/main/public/img/miami.jpg');
+}
+
 .bg-new_york {
   background-image: url('https://raw.githubusercontent.com/platzi/PlatziTravel/main/public/img/new_york.jpg');
 }
@@ -822,6 +848,10 @@ select {
 
 .bg-yosemite {
   background-image: url('https://raw.githubusercontent.com/platzi/PlatziTravel/main/public/img/yosemite.jpg');
+}
+
+.bg-LA {
+  background-image: url('https://raw.githubusercontent.com/platzi/PlatziTravel/main/public/img/LA.jpg');
 }
 
 .bg-cover {
@@ -845,13 +875,22 @@ select {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.font-\[\'Monserrat\'\2c \'sans-serif\'\] {
-  font-family: 'Monserrat','sans-serif';
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
 }
 
 .font-Montserrat {
@@ -863,13 +902,18 @@ select {
   line-height: 2.25rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
+.text-lg {
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -957,6 +1001,18 @@ select {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.CardTitle {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus-within\:shadow-sm:focus-within {
