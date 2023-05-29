@@ -19,17 +19,27 @@ module.exports = {
         'switzerland': "url('https://raw.githubusercontent.com/platzi/PlatziTravel/main/public/img/switzerland.jpg')",
         'sidney': "url('https://raw.githubusercontent.com/platzi/PlatziTravel/main/public/img/sydney.jpg')",
         'yosemite': "url('https://raw.githubusercontent.com/platzi/PlatziTravel/main/public/img/yosemite.jpg')"
-
-
-        
-
-
-      }  
+      },
+      backgroundColor: theme =>({
+        ...theme('colors'),
+        'primary': '#CC2D4A',
+        'secondary': '#8FA206',
+        'terciary': '#61AEC9'
+      }),
+      textColor:{
+        'primary': '#CC2D4A',
+        'secondary': '#8FA206',
+        'terciary': '#61AEC9'
+      },
+      fontFamily: { 
+        Montserrat: ["Montserrat", "sans-serif"]
+      },   
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio')
+    require('@tailwindcss/aspect-ratio'),
+    require('tailwind-scrollbar-hide')
   ],
 }
