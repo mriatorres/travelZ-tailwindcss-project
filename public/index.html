@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth" lang="en" x-data="{dark:false}" x-bind:class="dark ? 'dark' : ''">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,17 +11,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travelz | Viajes a un click</title>
 </head>
-<body class="font-Montserrat">
-    <nav></nav>
+<body class="font-Montserrat dark:bg-gray-900">
+    <nav class="w-full h-14 hidden bg-white lg:flex lg:p-4 lg:justify-between lg:fixed z-10 dark:bg-gray-800">
+        <div class="h-auto w-auto z-10">
+            <p class="text-xl text-primary font-extrabold dark:text-white">TravelZ</p>
+        </div>
+
+        <div class="flex space-x-8">
+            <a href="#home" class="font-bold text-md text-primary dark:text-white">Inicio</a>
+            <a href="#recomendados" class="font-bold text-md text-primary dark:text-white">Recomendados</a>
+            <a href="#rentas_destacadas" class="font-bold text-md text-primary dark:text-white">Rentas</a>
+            <a href="#faqs" class="font-bold text-md text-primary dark:text-white">FAQS</a>
+            <a href="#footer" class="font-bold text-md text-primary dark:text-white">Sobre nosotros</a>
+        </div> 
+            <div class="flex space-x-4">
+                 <a href="#rentas_destacadas">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400   hover:text-primary">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                      </svg>              
+                 </a>
+
+                 <button x-on:click="dark=!dark" id="moon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400  hover:text-primary">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                      </svg>
+                 </button>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400  hover:text-primary">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                          </svg>      
+                    </a> 
+            </div>
+    </nav>
     <section class="w-full h-auto">
-        <div id="home">
-            <div class="w-full h-3/4">
-                <div class="w-full h-full flex flex-col absolute space-y-96 lg:space-x-10 space-x-6 py-4 items-center lg:space-y-0  lg:items-start lg:pt-20 lg:justify-start">
+        <div class="w-full h-3/4" id="home">
+            <div class="w-full h-full">
+                <div class="w-full h-full flex flex-col absolute space-y-96 lg:space-x-10 space-x-6 py-4 items-center lg:space-y-0  lg:items-start lg:pt-32 lg:justify-start">
                     <input class="w-3/4 rounded-full outline-none p-3 shadow-sm transition ease-in-out duration-500 focus-within:shadow-sm focus:ring-2 transform focus:scale-x-105 focus:w-11/12 lg:hidden" placeholder="San Francisco" type="search" id="search">
                     <div class="hidden h-auto lg:w-2/5 lg:flex pb-6">
                         <p class= "text-3xl ml-16 font-bold text-text">Encuentra más ubicaciones como esta</p>
                     </div>
-                    <button class="bg-white text-primary shadow-sm w-48 rounded-full text-lg p-4 text-primary transition ease-in-out delay-150 hover:bg-primary duration-500 hover:text-white transform hover:-translate-y-1 hover:scale-110 lg: ml-16">
+                    <button class="bg-white dark:text-black text-primary shadow-sm w-48 rounded-full text-lg p-4 text-primary transition ease-in-out delay-150 hover:bg-primary dark:hover:bg-gray-400 duration-500 hover:text-white transform hover:-translate-y-1 hover:scale-110 lg: ml-16">
                         Explorar
                     </button>
                  </div>
@@ -31,54 +61,54 @@
             </div>
         </div>
         <div class="p-6 scrollbar-hide md:scrollbar-default" id="recomendados">
-            <p class="text-3xl font-semibold text-primary">Recomendados</p>
+            <p class="text-3xl font-semibold text-primary dark:text-white">Recomendados</p>
             <div class="w-auto h-72 items-center mt-6 overflow-y-hidden overflow-x-auto overscroll-x-contain flex space-x-6">
                 <div class="Card">
                     <div class="w-full h-3/5 bg-norway bg-cover rounded-t-lg"></div>
-                    <div class="bg-[#8FA206] w-full h-2/5 rounded-b-sm">
+                    <div class="bg-[#8FA206] w-full h-2/5 rounded-b-sm dark:bg-gray-700">
                         <p class="text-white text-bold text-xl px-4">Norway</p>
                         <p class="text-white text-md px-4">Paisajes Increíbles</p>
                     </div>
                 </div>
                 <div class="Card">
                     <div class="w-full h-3/5 bg-new_york bg-cover rounded-t-lg"></div>
-                    <div class="bg-white w-full h-2/5 rounded-b-sm">
-                        <p class="text-[#61AEC9] text-bold text-xl px-4">New York</p>
-                        <p class="text-[#61AEC9] text-md px-4">La gran manzana</p>
+                    <div class="bg-white w-full h-2/5 rounded-b-sm dark:bg-gray-800">
+                        <p class="text-[#61AEC9] text-bold text-xl px-4 dark:text-white">New York</p>
+                        <p class="text-[#61AEC9] text-md px-4 dark:text-white">La gran manzana</p>
                     </div>
                 </div>
                 <div class="Card">
                     <div class="w-full h-3/5 bg-seattle bg-cover rounded-t-lg"></div>
-                    <div class="bg-[#8FA206] w-full h-2/5 rounded-b-sm">
-                        <p class="text-white text-bold text-xl px-4">Seattle</p>
+                    <div class="bg-[#8FA206] w-full h-2/5 rounded-b-sm dark:bg-gray-700">
+                        <p class="text-white text-bold text-xl px-4 dark:text-white">Seattle</p>
                         <p class="text-white text-md px-4">Una ciudad para disfrutar al maximo</p>
                     </div>
                 </div>
                 <div class="Card">
                     <div class="w-full h-3/5 bg-switzerland bg-cover rounded-t-lg"></div>
-                    <div class="bg-white w-full h-2/5 rounded-b-sm">
-                        <p class="text-[#61AEC9] text-bold text-xl px-4">Switzerland</p>
-                        <p class="text-[#61AEC9] text-md px-4">El mejor chocolate caliente que probarás</p>
+                    <div class="bg-white w-full h-2/5 rounded-b-sm dark:bg-gray-800">
+                        <p class="text-[#61AEC9] text-bold text-xl px-4 dark:text-white">Switzerland</p>
+                        <p class="text-[#61AEC9] text-md px-4 dark:text-white">El mejor chocolate caliente que probarás</p>
                     </div>
                 </div>
                 <div class="Card">
                     <div class="w-full h-3/5 bg-yosemite bg-cover rounded-t-lg"></div>
-                    <div class="bg-[#8FA206] w-full h-2/5 rounded-b-sm">
-                        <p class="text-white text-bold text-xl px-4">Yosemite</p>
-                        <p class="text-white text-md px-4">Un respiro del mundo</p>
+                    <div class="bg-[#8FA206] w-full h-2/5 rounded-b-sm dark:bg-gray-700">
+                        <p class="text-white text-bold text-xl px-4  dark:text-white">Yosemite</p>
+                        <p class="text-white text-md px-4 dark:text-white">Un respiro del mundo</p>
                     </div>
                 </div>
                 <div class="Card">
                     <div class="w-full h-3/5 bg-switzerland bg-cover rounded-t-lg"></div>
-                    <div class="bg-white w-full h-2/5 rounded-b-sm">
-                        <p class="text-[#61AEC9] text-bold text-xl px-4">Edingburgh</p>
-                        <p class="text-[#61AEC9] text-md px-4">Castillos y tiempos medievales</p>
+                    <div class="bg-white w-full h-2/5 rounded-b-sm dark:bg-gray-800">
+                        <p class="text-[#61AEC9] text-bold text-xl px-4 dark:text-white">Edingburgh</p>
+                        <p class="text-[#61AEC9] text-md px-4 dark:text-white">Castillos y tiempos medievales</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="px-6 h-full w-full" id="rentas_destacadas">
-            <p class="text-3xl text-primary font-semibold pb-6 mt-6">Rentas Destacadas</p>
+            <p class="text-3xl text-primary font-semibold pb-6 mt-6 dark:text-white">Rentas Destacadas</p>
             <div class="w-full h-full flex flex-col items-center">
                 <div class="w-full h-96 bg-chicago bg-cover sm:bg-center md:bg-center lg:bg-bottom rounded-xl mb-8">
                    <div class="lg:pl-20">
@@ -108,35 +138,35 @@
                 
         <div class="px-6 w-full h-full" id="faqs">
             <div class="w-full h-full px-6 flex flex-col space-y-4">
-                <p class="text-3xl text-primary font-semibold mt-6">FAQS</p>
+                <p class="text-3xl text-primary font-semibold mt-6 dark:text-white">FAQS</p>
                 <div>
-                    <p class="text-xl font-medium text-primary">Política de cancelación</p>
-                    <p class="text-md pt-2">Para estancias menores a una semana es importante avisar con 3 días de
+                    <p class="text-xl font-medium text-primary dark:text-white">Política de cancelación</p>
+                    <p class="text-md pt-2 dark:text-gray-300">Para estancias menores a una semana es importante avisar con 3 días de
                         anticipación, de caso contario será sancionado.</p>
                 </div>
                 <div>
-                    <p class="text-xl font-medium text-primary">Métodos de pago</p>
-                    <p class="text-md pt-2">Aceptamos distintos métodos de pago: VISA, MasterCard, American Express,
+                    <p class="text-xl font-medium text-primary dark:text-white">Métodos de pago</p>
+                    <p class="text-md pt-2 dark:text-gray-300">Aceptamos distintos métodos de pago: VISA, MasterCard, American Express,
                         Paypal y Binance</p>
                 </div>
                 <div>
-                    <p class="text-xl font-medium text-primary">Mascotas</p>
-                    <p class="text-md pt-2">El tema de las mascotas dependerá directamente del anfitrión.</p>
+                    <p class="text-xl font-medium text-primary dark:text-white">Mascotas</p>
+                    <p class="text-md pt-2 dark:text-gray-300">El tema de las mascotas dependerá directamente del anfitrión.</p>
                 </div>
                 <div>
-                    <p class="text-xl font-medium text-primary">Información de Seguridad</p>
-                    <p class="text-md pt-2">Todas nuestras estancias cuentan con seguro en caso de accidentes</p>
+                    <p class="text-xl font-medium text-primary dark:text-white">Información de Seguridad</p>
+                    <p class="text-md pt-2 dark:text-gray-300">Todas nuestras estancias cuentan con seguro en caso de accidentes</p>
                 </div>
                 <div>
-                    <p class="text-xl font-medium text-primary">Estancias Largas</p>
-                    <p class="text-md pt-2">Contamos con estancias de hasta 3 meses, en este caso es requerido un
+                    <p class="text-xl font-medium text-primary dark:text-white">Estancias Largas</p>
+                    <p class="text-md pt-2 dark:text-gray-300">Contamos con estancias de hasta 3 meses, en este caso es requerido un
                         anticipo con un monto del 50% del valor de la renta</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="w-full h-auto bg-gray-50 p-6 space-y-2">
+    <footer class="w-full lg:h-full h-80 bg-gray-50 p-6 mt-20 space-y-2 dark:bg-gray-800" id="footer">
         <p class="text-sm text-gray-300 hover:text-primary transform hover:-translate-y-1 hover:scale-100">Acerca De</p>
         <p class="text-sm text-gray-300 hover:text-primary transform hover:-translate-y-1 hover:scale-100">Inversionistas</p>
         <p class="text-sm text-gray-300 hover:text-primary transform hover:-translate-y-1 hover:scale-100">Empleos</p>
@@ -146,7 +176,7 @@
         <i class="fa-brands fa-instagram text-purple-400 hover:-translate-y-1 hover:scale-100"></i>
     </footer>
 
-    <div  class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-around lg:hidden" id="tab_bar">
+    <div  class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-around lg:hidden dark:bg-gray-700" id="tab_bar">
         <a href="#home">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-400 hover:text-primary">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
@@ -163,7 +193,7 @@
               </svg>
               
         </a>
-        <button>
+        <button x-on:click="dark=!dark" id="moon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-400 hover:text-primary">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
               </svg>
@@ -176,6 +206,6 @@
               
         </a>
     </div>
-
+    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 </html>

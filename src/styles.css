@@ -10,3 +10,11 @@
 .CardTitle{
     @apply text-3xl px-8 pt-8 pb-2 font-semibold text-white
 }
+
+.card:nth-child(odd) {
+    @apply bg-secondary text-white dark:bg-gray-700;
+  }
+  .card:nth-child(even) {
+    @apply bg-white text-terciary dark:bg-gray-800 dark:text-gray-300;
+  }
+  
