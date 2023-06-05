@@ -44,7 +44,7 @@
             </div>
     </nav>
 
-    <section class="" id="profile">
+    <section class="hidden" id="profile">
         <div class="lg:w-2/5 lg:h-full lg:fixed lg:z-10 lg:right-1 lg:mt-16 w-screen h-screen mt-40 p-6">
             <form class="dark:bg-gray-700 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
               <div class="mb-4">
@@ -234,9 +234,12 @@
         </button>
 
         <button onclick="hide()">
+         <a href="#profile">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-400 hover:text-primary">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>      
+              </svg> 
+  
+         </a>         
         </button>
     </div>
     <script src="//unpkg.com/alpinejs" defer></script>
